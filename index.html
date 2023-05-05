@@ -10,6 +10,7 @@
     <meta name="author" content="Michael Godfrey" />
     <meta http-equiv="Cache-control" content="public" />
 
+    <!-- google reviews script -->
     <script
       src="https://widgets.sociablekit.com/google-reviews/widget.js"
       async
@@ -19,50 +20,70 @@
     <link rel="stylesheet" href="/style/output.css" />
     <title>Ethan's Coffee Heaven</title>
   </head>
-  <body class="bg-background scroll-smooth">
-    <header class="flex justify-between items-center">
-      <div class="">
-        <img
-          src="images/ech-banner-removebg.png"
-          alt="Ethans Coffee Heaven logo"
-          class="max-h-[100px]"
-        />
-      </div>
 
-      <!-- desktop nav -->
-      <nav class="hidden md:block text-title text-lg w-2/3">
-        <ul class="flex justify-between">
-          <li>
-            <a
-              href="#"
-              class="bg-primary border border-secondary rounded-lg px-4 py-2"
-              >Make a Booking</a
+  <body class="bg-background">
+    <header class="flex justify-between items-center p-4 xl:hidden">
+      <img
+        src="images/ech-banner-logo-cropped.png"
+        alt="Ethans Coffee Heaven logo"
+        class=""
+      />
+
+      <!-- mobile drawer menu -->
+      <section class="drawer" id="drawer-name" data-drawer-target>
+        <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+        <div class="drawer__wrapper">
+          <div class="drawer__header">
+            <div class="">Ethan's Coffee Heaven</div>
+            <button
+              class="drawer__close"
+              data-drawer-close
+              aria-label="Close Drawer"
             >
-          </li>
-          <li>
-            <a href="#">Menus</a>
-          </li>
-          <li>
-            <a href="#">Testimonals</a>
-          </li>
-          <li>
-            <a href="#">Locations</a>
-          </li>
-        </ul>
-      </nav>
+              <img
+                src="images/close-lg-svgrepo-com.svg"
+                alt="close drawer icon"
+              />
+            </button>
+          </div>
 
-      <!-- mobile nav -->
-      <nav class="md:hidden">
-        Todo: dropdown
-        <!-- <ul>
-          <li>Make a Booking</li>
-          <li>Coffee/Drink Menu</li>
-          <li>Breakfast Menu</li>
-          <li>Lunch Menu</li>
-          <li>Testimonals</li>
-          <li>Locations</li>
-        </ul> -->
-      </nav>
+          <div class="drawer__content bg-beans-wall bg-top bg-contain bg-no-repeat">
+            <nav class="">
+              <ul>
+                <li>
+                  <a href="#">Make a booking</a>
+                </li>
+                <li>
+                  <a href="#menus"> See menus </a>
+                </li>
+                <li>
+                  <a href="#testimonals">Customer testimonals</a>
+                </li>
+                <li>
+                  <a href="#labasa">Labasa cafe</a>
+                </li>
+                <li>
+                  <a href="#savusavu">Savsusavu cafe</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <div>
+        <a
+          href="#"
+          data-drawer-trigger
+          aria-controls="drawer-name"
+          aria-expanded="false"
+        >
+          <img
+            src="images/menu-burger-svgrepo-com.svg"
+            alt="mobile menu icon"
+          />
+        </a>
+      </div>
     </header>
 
     <main>
@@ -70,182 +91,266 @@
       <section class="flex flex-col md:flex-row min-h-screen bg-gray-100">
         <!-- Left column -->
         <div class="md:w-1/2 px-6 py-12">
-          <img src="images/ech-banner-removebg-secondary.png" alt="Cafe Name" class="border mb-4">
-          <p class="text-gray-700 text-lg mb-4">A cozy cafe serving up the best coffee in town.</p>
+          <img
+            src="images/ech-banner-removebg-secondary.png"
+            alt="Cafe Name"
+            class="border mb-4"
+          />
+          <p class="text-gray-700 text-lg mb-4">
+            A cozy cafe serving up the best coffee in town.
+          </p>
           <div class="flex space-x-4">
-            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded">Menus</a>
-            <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-4 py-2 rounded">Book</a>
+            <a
+              href="#"
+              class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded"
+              >Menus</a
+            >
+            <a
+              href="#"
+              class="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-4 py-2 rounded"
+              >Book</a
+            >
           </div>
         </div>
         <!-- Right column -->
         <div class="md:w-1/2">
-          <img src="images/bula-coffee.jpg" alt="Cafe Image" class="w-full h-full object-cover">
+          <img
+            src="images/bula-coffee.jpg"
+            alt="Cafe Image"
+            class="w-full h-full object-cover"
+          />
         </div>
       </section>
 
       <!-- menus -->
-      <section class="min-h-screen">
-        <h2 class="text-center">Menus</h2>
-        <div class="flex justify-evenly">
-          <div class="max-w-[200px]">
-            <img src="images/placeholder.png" alt="" />
+      <section
+        id="menus"
+        class="mb-24 mx-auto min-h-screen max-w-screen-xl px-4"
+      >
+        <h2 class="text-center mb-8">Menus</h2>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <div class="border bg-green-400">
+            <img src="images/coffee.webp" alt="a cup of well presented coffee" />
             <h3>Coffee & drinks</h3>
           </div>
-          <div class="max-w-[200px]">
-            <img src="images/placeholder.png" alt="" />
+
+          <div class="bg-beans bg-center bg-cover">
+            div
+          </div>
+
+          <div class="">
+            div
+          </div>
+
+          <div class="border bg-blue-400">
+            <img src="images/breakfast.webp" alt="a delicious breakfast" />
             <h3>Breakfast</h3>
           </div>
-          <div class="max-w-[200px]">
-            <img src="images/placeholder.png" alt="" />
+
+          <div class="border bg-red-400">
+            <img src="images/lunch.webp" alt="a delicious lunch" />
             <h3>Lunch</h3>
           </div>
+
         </div>
       </section>
+
       <!-- reviews -->
-      <section class="mb-36">
+      <section
+        id="testimonals"
+        class="mb-24 mx-auto min-h-screen max-w-screen-xl px-4 bg-beans-cover"
+      >
         <h2 class="text-center">What our customers say</h2>
 
-        <!-- <div class="reviews">
-          <div class='sk-ww-google-reviews' data-embed-id='114009'></div>
-          <a class="underline" href="https://g.page/r/CRSPZUyY67JkEB0/review">
-            <span>Review Ethan's Coffee Heaven on Google!</span>
-          </a>
+        <!-- <div class="mb-8">
+          <div class="sk-ww-google-reviews" data-embed-id="114009"></div>
         </div> -->
 
-        <!-- tripadvisor reviews -->
-        <!-- <div class="reviews">
-          <div class='sk-ww-tripadvisor-reviews' data-embed-id='114321'></div><script src='https://widgets.sociablekit.com/tripadvisor-reviews/widget.js' async defer></script>
-        </div> -->
+        <a
+          href="https://g.page/r/CRSPZUyY67JkEB0/review"
+          class="flex items-center mx-auto max-w-lg p-4 transition-color text-xl text-title bg-primary hover:bg-primaryHover cursor-pointer rounded-lg shadow-lg"
+        >
+          <img
+            src="images/google-svgrepo-com.svg"
+            alt="google logo"
+            class="mr-4"
+          />
+          <span>Review Ethan's Coffee Heaven on Google!</span>
+        </a>
+
+        <div class="hidden xl:my-8"></div>
+
+        <!-- tripadvisor reviews, hidden on mobile and tablet -->
+        <div class="hidden xl:block">
+          <div class="sk-ww-tripadvisor-reviews" data-embed-id="114321"></div>
+          <script
+            src="https://widgets.sociablekit.com/tripadvisor-reviews/widget.js"
+            async
+            defer
+          ></script>
+        </div>
       </section>
 
       <!-- location -->
-      <section>
+      <section id="location" class="min-h-screen max-w-screen-xl mx-auto px-4 bg-beans-cover bg-contain">
         <h2 class="text-center mb-8">Locations</h2>
-        <div class="flex flex-col md:flex-row justify-around">
-          <div class="border">
-            <h3 class="mb-4">Labasa</h3>
 
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
-              <img
-                src="images/schedule-svgrepo-com.svg"
-                alt="schedule icon"
-                class="h-[50px]"
-              />
-              <span class="">9am - 9pm, 7 Days</span>
-            </div>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
-              <img
-                src="images/phone-svgrepo-com.svg"
-                alt="schedule icon"
-                class="h-[50px]"
-              />
-              <a href="tel:8082204"> 8082204 </a>
-            </div>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
+        <div
+          id="labasa"
+          class="flex flex-col lg:flex-row lg:justify-around mb-12"
+        >
+          <div
+            class="mb-8 lg:mb-0 mx-auto lg:mx-2 max-w-[540px] rounded-lg shadow-lg pb-4 bg-white"
+          >
+            <img
+              src="images/labasa-site.webp"
+              alt="Labasa store image"
+              loading="lazy"
+              class="rounded-t-lg mb-4"
+            />
+            <h3 class="mb-4 pl-4 text-3xl tracking-wide">Labasa</h3>
+            <div class="flex items-center py-2 px-4">
               <img
                 src="images/location-pin-svgrepo-com.svg"
                 alt="schedule icon"
-                class="h-[50px]"
+                height="48px"
+                width="48px"
               />
-              <span class="">Galaxy Complex, Labasa</span>
+              <span class="ml-4">Galaxy Complex, Labasa</span>
             </div>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
+            <div class="flex items-center py-2 px-4">
               <img
                 src="images/navigate-pin-svgrepo-com.svg"
                 alt="schedule icon"
-                class="h-[50px]"
+                height="48px"
+                width="48px"
               />
-              <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6" class=""
+              <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6" class="ml-4"
                 >Directions</a
               >
             </div>
-            <div class="">
-              <h4 class="text-center">Socials</h4>
-              <div class="flex justify-evenly">
-                <a href="https://www.facebook.com/ethanscoffee">
+            <div class="flex items-center py-2 px-4">
+              <img
+                src="images/schedule-svgrepo-com.svg"
+                alt="schedule icon"
+                height="48px"
+                width="48px"
+              />
+              <span class="ml-4">9am - 9pm, 7 Days</span>
+            </div>
+            <div class="flex items-center py-2 px-4 mb-8">
+              <img
+                src="images/phone-svgrepo-com.svg"
+                alt="schedule icon"
+                height="48px"
+                width="48px"
+              />
+              <a href="tel:+6798082204" class="ml-4">808 2204</a>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-xl font-semibold mb-4">Social media</h4>
+              <div class="flex justify-start">
+                <a
+                  href="https://www.facebook.com/ethanscoffee"
+                  class="hover:-translate-y-1 transition-transform mr-4"
+                >
                   <img
                     src="images/facebook-svgrepo-com.svg"
                     alt="facebook logo"
+                    height="64px"
+                    width="64px"
                   />
                 </a>
-                <a href="https://www.instagram.com/ethanscoffeeheaven/?hl=en">
+                <a
+                  href="https://www.instagram.com/ethanscoffeeheaven/?hl=en"
+                  class="hover:-translate-y-1 transition-transform"
+                >
                   <img
                     src="images/instagram-svgrepo-com.svg"
                     alt="instagram logo"
+                    height="64px"
+                    width="64px"
                 /></a>
               </div>
             </div>
           </div>
 
-          <div class="border">
-            <h3 class="mb-4">Savusavu</h3>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
-              <img
-                src="images/schedule-svgrepo-com.svg"
-                alt="schedule icon"
-                class="h-[50px]"
-              />
-              <span class="">8am - 8pm, 7 Days</span>
-            </div>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
-              <img
-                src="images/phone-svgrepo-com.svg"
-                alt="schedule icon"
-                class="h-[50px]"
-              />
-              <a href="tel:9078562"> 907 8562 </a>
-            </div>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
+          <div
+            id="savusavu"
+            class="border mx-auto lg:mx-2 shadow-lg rounded-lg pb-4 bg-white"
+          >
+            <img
+              src="images/savusavu-site.webp"
+              alt="Savsusavu store image"
+              loading="lazy"
+              class="rounded-t-lg mb-4"
+            />
+            <h3 class="mb-4 pl-4 text-3xl tracking-wide">Savusavu</h3>
+            <div class="flex items-center py-2 px-4">
               <img
                 src="images/location-pin-svgrepo-com.svg"
                 alt="schedule icon"
-                class="h-[50px]"
+                height="48px"
+                width="48px"
               />
-              <span class="">Lesiaceva Rd, Savusavu</span>
+              <span class="ml-4">Lesiaceva Rd, Savusavu</span>
             </div>
-            <div
-              class="flex justify-between items-center w-full min-w-[300px] border py-2 px-4"
-            >
+            <div class="flex items-center py-2 px-4">
               <img
                 src="images/navigate-pin-svgrepo-com.svg"
                 alt="schedule icon"
-                class="h-[50px]"
+                height="48px"
+                width="48px"
               />
               <a
                 href="https://www.google.com/maps/dir//Ethan%E2%80%99s+Coffee+Heaven,+Lesiaceva+Rd,+Savusavu/@-16.7795458,179.3273185,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x6e1f77724a36a9b7:0x64b2eb984c658f14!2m2!1d179.3295072!2d-16.7795509!3e0"
-                class=""
+                class="ml-4"
                 >Directions</a
               >
             </div>
-            <div class="">
-              <h4 class="text-center">Socials</h4>
-              <div class="flex justify-evenly">
+            <div class="flex items-center py-2 px-4">
+              <img
+                src="images/schedule-svgrepo-com.svg"
+                alt="schedule icon"
+                height="48px"
+                width="48px"
+              />
+              <span class="ml-4">8am - 8pm, 7 Days</span>
+            </div>
+            <div class="flex items-center py-2 px-4 mb-8">
+              <img
+                src="images/phone-svgrepo-com.svg"
+                alt="schedule icon"
+                height="48px"
+                width="48px"
+              />
+              <a href="tel:+6799078562" class="ml-4">907 8562</a>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-xl font-semibold mb-2">Social media</h4>
+              <div class="flex justify-start">
                 <a
                   href="https://www.facebook.com/people/Ethans-coffee-heaven/100064196137922/"
+                  class="hover:-translate-y-1 transition-transform mr-4"
                 >
                   <img
                     src="images/facebook-svgrepo-com.svg"
                     alt="facebook logo"
+                    height="64px"
+                    width="64px"
                   />
                 </a>
                 <a
                   href="https://www.tripadvisor.com/Restaurant_Review-g297565-d24862689-Reviews-Ethans_Coffee_Heaven-Savusavu_Vanua_Levu.html"
+                  class="hover:-translate-y-1 transition-transform"
                 >
-                  <img src="images/tripadvisor.svg" alt="tripadvisor logo"
+                  <img
+                    src="images/tripadvisor.svg"
+                    alt="tripadvisor logo"
+                    height="64px"
+                    width="64px"
                 /></a>
               </div>
             </div>
@@ -253,6 +358,7 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <script src="scripts/aos.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
