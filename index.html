@@ -21,105 +21,151 @@
     <title>Ethan's Coffee Heaven</title>
   </head>
 
-  <body class="bg-background">
-    <header class="flex justify-between items-center p-4 xl:hidden">
-      <img
-        src="images/ech-banner-logo-cropped.png"
-        alt="Ethans Coffee Heaven logo"
-        class=""
-      />
-
-      <!-- mobile drawer menu -->
-      <section class="drawer" id="drawer-name" data-drawer-target>
-        <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-        <div class="drawer__wrapper">
-          <div class="drawer__header">
-            <div class="">Ethan's Coffee Heaven</div>
-            <button
-              class="drawer__close"
-              data-drawer-close
-              aria-label="Close Drawer"
-            >
-              <img
-                src="images/close-lg-svgrepo-com.svg"
-                alt="close drawer icon"
-              />
-            </button>
-          </div>
-
-          <div class="drawer__content bg-beans-wall bg-top bg-contain bg-no-repeat">
-            <nav class="">
-              <ul>
-                <li>
-                  <a href="#">Make a booking</a>
-                </li>
-                <li>
-                  <a href="#menus"> See menus </a>
-                </li>
-                <li>
-                  <a href="#testimonals">Customer testimonals</a>
-                </li>
-                <li>
-                  <a href="#labasa">Labasa cafe</a>
-                </li>
-                <li>
-                  <a href="#savusavu">Savsusavu cafe</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </section>
-
-      <div>
-        <a
-          href="#"
-          data-drawer-trigger
-          aria-controls="drawer-name"
-          aria-expanded="false"
-        >
-          <img
-            src="images/menu-burger-svgrepo-com.svg"
-            alt="mobile menu icon"
-          />
-        </a>
-      </div>
-    </header>
-
+  <body class="bg-background text-text">
     <main>
       <!-- hero -->
-      <section class="flex flex-col md:flex-row min-h-screen bg-gray-100">
-        <!-- Left column -->
-        <div class="md:w-1/2 px-6 py-12">
-          <img
-            src="images/ech-banner-removebg-secondary.png"
-            alt="Cafe Name"
-            class="border mb-4"
-          />
-          <p class="text-gray-700 text-lg mb-4">
-            A cozy cafe serving up the best coffee in town.
-          </p>
-          <div class="flex space-x-4">
+      <section class="flex flex-col min-h-screen bg-banner bg-cover">
+        <!-- desktop nav items -->
+        <nav class="hidden lg:block py-4 pr-36">
+          <ul class="flex justify-end text-background font-semibold text-lg">
+            <li class="mx-4">
+              <a href="#" class="ml-4">CALL</a>
+            </li>
+            <li class="mx-4">
+              <a href="#menus" class="ml-4">MENU</a>
+            </li>
+            <li class="mx-4">
+              <a href="#testimonals" class="ml-4">REVIEWS</a>
+            </li>
+            <li class="mx-4">
+              <a href="#labasa" class="ml-4">LOCATIONS</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- mobile drawer menu -->
+        <div class="flex justify-end items-center p-4 lg:hidden">
+          <div class="drawer" id="drawer-name" data-drawer-target>
+            <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+            <div class="drawer__wrapper">
+              <div
+                class="drawer__header bg-secondary text-background tracking-widest"
+              >
+                <div class="text-xl">Ethan's Coffee Heaven</div>
+                <button
+                  class="drawer__close"
+                  data-drawer-close
+                  aria-label="Close Drawer"
+                >
+                  <img
+                    src="images/icons/close-lg-svgrepo-com.svg"
+                    alt="close drawer icon"
+                    height="24px"
+                    width="24px"
+                  />
+                </button>
+              </div>
+
+              <div
+                class="drawer__content bg-background bg-beans-wall bg-top bg-contain bg-repeat"
+              >
+                <nav class="text-3xl">
+                  <ul>
+                    <li class="mb-4 flex items-center">
+                      <img
+                        src="images/icons/phone-svgrepo-com.svg"
+                        alt="phone icon"
+                        height="48px"
+                        width="48px"
+                      />
+                      <a href="#" class="ml-4">Book</a>
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <img
+                        src="images/icons/food-menu-svgrepo-com.svg"
+                        alt="menu icon"
+                        height="48px"
+                        width="48px"
+                      />
+                      <a href="#menus" class="ml-4">Menus</a>
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <img
+                        src="images/icons/quote-svgrepo-com.svg"
+                        alt="menu icon"
+                        height="48px"
+                        width="48px"
+                      />
+                      <a href="#testimonals" class="ml-4">Reviews</a>
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <img
+                        src="images/icons/coffee-shop-svgrepo-com.svg"
+                        alt="menu icon"
+                        height="48px"
+                        width="48px"
+                      />
+                      <a href="#labasa" class="ml-4">Labasa</a>
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <img
+                        src="images/icons/coffee-shop-svgrepo-com.svg"
+                        alt="menu icon"
+                        height="48px"
+                        width="48px"
+                      />
+                      <a href="#savusavu" class="ml-4">Savsusavu</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div>
             <a
               href="#"
-              class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded"
-              >Menus</a
+              data-drawer-trigger
+              aria-controls="drawer-name"
+              aria-expanded="false"
             >
-            <a
-              href="#"
-              class="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-4 py-2 rounded"
-              >Book</a
-            >
+              <img
+                src="images/icons/menu-burger-svgrepo-com.svg"
+                alt="mobile menu icon"
+                height="48px"
+                width="48px"
+              />
+            </a>
           </div>
         </div>
-        <!-- Right column -->
-        <div class="md:w-1/2">
-          <img
-            src="images/bula-coffee.jpg"
-            alt="Cafe Image"
-            class="w-full h-full object-cover"
-          />
+
+        <!-- title and CTA buttons -->
+        <div class="px-6 py-12 w-full h-full">
+          <div class="text-background max-w-[700px]">
+            <h1 class="text-[0px]">Ethan's Coffee Heaven</h1>
+            <img
+              src="images/ech-banner.webp"
+              alt="logo image"
+              class="rounded-xl mb-4 shadow-md"
+            />
+            <p class="text-lg mb-8">
+              Serving up the best coffee in Labasa and Savusavu!
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#menus"
+                class="bg-primary hover:bg-primaryHover text-title font-semibold px-8 py-2 rounded-xl"
+                >View Menus</a
+              >
+              <a
+                href="#"
+                class="bg-secondary hover:bg-text text-white font-semibold px-8 py-2 rounded-xl"
+                >CALL</a
+              >
+            </div>
+          </div>
         </div>
+        
       </section>
 
       <!-- menus -->
@@ -130,19 +176,17 @@
         <h2 class="text-center mb-8">Menus</h2>
 
         <div class="grid grid-cols-2 gap-4">
-
           <div class="border bg-green-400">
-            <img src="images/coffee.webp" alt="a cup of well presented coffee" />
+            <img
+              src="images/coffee.webp"
+              alt="a cup of well presented coffee"
+            />
             <h3>Coffee & drinks</h3>
           </div>
 
-          <div class="bg-beans bg-center bg-cover">
-            div
-          </div>
+          <div class="">div</div>
 
-          <div class="">
-            div
-          </div>
+          <div class="">div</div>
 
           <div class="border bg-blue-400">
             <img src="images/breakfast.webp" alt="a delicious breakfast" />
@@ -153,14 +197,13 @@
             <img src="images/lunch.webp" alt="a delicious lunch" />
             <h3>Lunch</h3>
           </div>
-
         </div>
       </section>
 
       <!-- reviews -->
       <section
         id="testimonals"
-        class="mb-24 mx-auto min-h-screen max-w-screen-xl px-4 bg-beans-cover"
+        class="mb-24 mx-auto min-h-screen max-w-screen-xl px-4"
       >
         <h2 class="text-center">What our customers say</h2>
 
@@ -173,7 +216,7 @@
           class="flex items-center mx-auto max-w-lg p-4 transition-color text-xl text-title bg-primary hover:bg-primaryHover cursor-pointer rounded-lg shadow-lg"
         >
           <img
-            src="images/google-svgrepo-com.svg"
+            src="images/social/google-svgrepo-com.svg"
             alt="google logo"
             class="mr-4"
           />
@@ -194,7 +237,7 @@
       </section>
 
       <!-- location -->
-      <section id="location" class="min-h-screen max-w-screen-xl mx-auto px-4 bg-beans-cover bg-contain">
+      <section id="location" class="min-h-screen max-w-screen-xl mx-auto px-4">
         <h2 class="text-center mb-8">Locations</h2>
 
         <div
@@ -202,10 +245,10 @@
           class="flex flex-col lg:flex-row lg:justify-around mb-12"
         >
           <div
-            class="mb-8 lg:mb-0 mx-auto lg:mx-2 max-w-[540px] rounded-lg shadow-lg pb-4 bg-white"
+            class="mb-8 lg:mb-0 mx-auto lg:mx-2 max-w-[540px] rounded-lg shadow-md pb-4 bg-white"
           >
             <img
-              src="images/labasa-site.webp"
+              src="images/location/labasa-site.webp"
               alt="Labasa store image"
               loading="lazy"
               class="rounded-t-lg mb-4"
@@ -213,7 +256,7 @@
             <h3 class="mb-4 pl-4 text-3xl tracking-wide">Labasa</h3>
             <div class="flex items-center py-2 px-4">
               <img
-                src="images/location-pin-svgrepo-com.svg"
+                src="images/icons/location-pin-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -222,7 +265,7 @@
             </div>
             <div class="flex items-center py-2 px-4">
               <img
-                src="images/navigate-pin-svgrepo-com.svg"
+                src="images/icons/navigate-pin-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -233,7 +276,7 @@
             </div>
             <div class="flex items-center py-2 px-4">
               <img
-                src="images/schedule-svgrepo-com.svg"
+                src="images/icons/schedule-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -242,7 +285,7 @@
             </div>
             <div class="flex items-center py-2 px-4 mb-8">
               <img
-                src="images/phone-svgrepo-com.svg"
+                src="images/icons/phone-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -257,7 +300,7 @@
                   class="hover:-translate-y-1 transition-transform mr-4"
                 >
                   <img
-                    src="images/facebook-svgrepo-com.svg"
+                    src="images/social/facebook-svgrepo-com.svg"
                     alt="facebook logo"
                     height="64px"
                     width="64px"
@@ -268,7 +311,7 @@
                   class="hover:-translate-y-1 transition-transform"
                 >
                   <img
-                    src="images/instagram-svgrepo-com.svg"
+                    src="images/social/instagram-svgrepo-com.svg"
                     alt="instagram logo"
                     height="64px"
                     width="64px"
@@ -279,10 +322,10 @@
 
           <div
             id="savusavu"
-            class="border mx-auto lg:mx-2 shadow-lg rounded-lg pb-4 bg-white"
+            class="border mx-auto lg:mx-2 shadow-md rounded-lg pb-4 bg-white"
           >
             <img
-              src="images/savusavu-site.webp"
+              src="images/location/savusavu-site.webp"
               alt="Savsusavu store image"
               loading="lazy"
               class="rounded-t-lg mb-4"
@@ -290,7 +333,7 @@
             <h3 class="mb-4 pl-4 text-3xl tracking-wide">Savusavu</h3>
             <div class="flex items-center py-2 px-4">
               <img
-                src="images/location-pin-svgrepo-com.svg"
+                src="images/icons/location-pin-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -299,7 +342,7 @@
             </div>
             <div class="flex items-center py-2 px-4">
               <img
-                src="images/navigate-pin-svgrepo-com.svg"
+                src="images/icons/navigate-pin-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -312,7 +355,7 @@
             </div>
             <div class="flex items-center py-2 px-4">
               <img
-                src="images/schedule-svgrepo-com.svg"
+                src="images/icons/schedule-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -321,7 +364,7 @@
             </div>
             <div class="flex items-center py-2 px-4 mb-8">
               <img
-                src="images/phone-svgrepo-com.svg"
+                src="images/icons/phone-svgrepo-com.svg"
                 alt="schedule icon"
                 height="48px"
                 width="48px"
@@ -336,7 +379,7 @@
                   class="hover:-translate-y-1 transition-transform mr-4"
                 >
                   <img
-                    src="images/facebook-svgrepo-com.svg"
+                    src="images/social/facebook-svgrepo-com.svg"
                     alt="facebook logo"
                     height="64px"
                     width="64px"
@@ -347,7 +390,7 @@
                   class="hover:-translate-y-1 transition-transform"
                 >
                   <img
-                    src="images/tripadvisor.svg"
+                    src="images/social/tripadvisor.svg"
                     alt="tripadvisor logo"
                     height="64px"
                     width="64px"
