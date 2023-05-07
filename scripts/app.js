@@ -193,3 +193,19 @@ document.addEventListener('keydown', keydownHandler, false);
 };
 
 drawer();
+
+
+
+
+// modal dialog 
+const openModal = document.getElementById("open-dialog");
+const closeModal = document.getElementById("close-dialog");
+const modal = document.querySelector("dialog");
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
