@@ -197,15 +197,16 @@ drawer();
 
 
 
-// modal dialog 
-const openModal = document.getElementById("open-dialog");
-const closeModal = document.getElementById("close-dialog");
+/*!
+* modal dialog
+*/
+
 const modal = document.querySelector("dialog");
 
-openModal.addEventListener("click", () => {
+function openDialog() {
   modal.showModal();
-});
+}
 
-closeModal.addEventListener("click", () => {
+function closeDialog() {
   modal.close();
-});
+}

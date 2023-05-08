@@ -10,37 +10,45 @@
     <meta name="author" content="Michael Godfrey" />
     <meta http-equiv="Cache-control" content="public" />
 
-    <!-- google reviews script -->
-    <!-- <script
-      src="https://widgets.sociablekit.com/google-reviews/widget.js"
-      async
-      defer
-    ></script> -->
-
     <link rel="stylesheet" href="/style/output.css" />
     <title>Ethan's Coffee Heaven</title>
   </head>
 
   <body class="bg-background text-text">
     <main>
-
       <!-- hero -->
-      <section class="flex flex-col min-h-screen bg-banner bg-cover">
-
+      <section class="flex flex-col min-h-screen bg-banner bg-cover mb-24">
         <!-- desktop nav items -->
         <nav class="hidden lg:block pt-8 pr-24">
-          <ul class="flex justify-end text-background font-semibold text-lg tracking-widest">
+          <ul
+            class="flex justify-end text-background font-semibold text-lg tracking-widest"
+          >
             <li class="mx-4">
-              <a href="#" class="ml-4 transition-colors hover:text-primary">CALL</a>
+              <a
+                href="#"
+                onclick="openDialog()"
+                class="bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title px-8 py-2 rounded-full shadow-md text-xl font-medium"
+                >CONTACT</a
+              >
             </li>
             <li class="mx-4">
-              <a href="#menus" class="ml-4 transition-colors hover:text-primary">MENU</a>
+              <a href="#menus" class="ml-4 transition-colors hover:text-primary"
+                >VIEW MENUS</a
+              >
             </li>
             <li class="mx-4">
-              <a href="#testimonals" class="ml-4 transition-colors hover:text-primary">REVIEWS</a>
+              <a
+                href="#testimonals"
+                class="ml-4 transition-colors hover:text-primary"
+                >REVIEWS</a
+              >
             </li>
             <li class="mx-4">
-              <a href="#labasa" class="ml-4 transition-colors hover:text-primary">LOCATIONS</a>
+              <a
+                href="#labasa"
+                class="ml-4 transition-colors hover:text-primary"
+                >LOCATIONS</a
+              >
             </li>
           </ul>
         </nav>
@@ -79,7 +87,9 @@
                         height="48px"
                         width="48px"
                       />
-                      <a href="#" id="open-dialog" class="ml-4 w-full">Book</a>
+                      <a href="#" onclick="openDialog()" class="ml-4 w-full"
+                        >Call</a
+                      >
                     </li>
                     <li class="mb-4 flex items-center">
                       <img
@@ -130,6 +140,7 @@
               data-drawer-trigger
               aria-controls="drawer-name"
               aria-expanded="false"
+              class="flex items-center text-background font-bold"
             >
               <img
                 src="images/icons/menu-burger-svgrepo-com.svg"
@@ -137,22 +148,29 @@
                 height="48px"
                 width="48px"
               />
+              <span class="ml-2">Menu</span>
             </a>
           </div>
         </div>
 
         <!-- modal dialog -->
         <dialog class="w-11/12 max-w-md px-8 rounded-xl">
-          <button id="close-dialog" class="float-right bg-secondary p-2 rounded-full">
-              <img
-                src="images/icons/close-lg-svgrepo-com.svg"
-                alt="close drawer icon"
-                height="24px"
-                width="24px"
-              />
-            </button>
+          <button
+            onclick="closeDialog()"
+            class="float-right bg-secondary p-2 rounded-full"
+          >
+            <img
+              src="images/icons/close-lg-svgrepo-com.svg"
+              alt="close drawer icon"
+              height="24px"
+              width="24px"
+            />
+          </button>
           <p class="mt-16">
-            <a href="tel:8082204" class="flex items-center pt-3 pb-2 px-4 border-4 border-secondary rounded-full shadow-md">
+            <a
+              href="tel:8082204"
+              class="flex items-center pt-3 pb-2 px-4 border-4 border-secondary rounded-full shadow-md"
+            >
               <img
                 src="images/icons/phone-svgrepo-com.svg"
                 alt="schedule icon"
@@ -163,7 +181,10 @@
             </a>
           </p>
           <p class="mb-8 mt-4">
-            <a href="tel:9078562" class="flex items-center pt-3 pb-2 px-4 border-4 border-secondary rounded-full shadow-md">
+            <a
+              href="tel:9078562"
+              class="flex items-center pt-3 pb-2 px-4 border-4 border-secondary rounded-full shadow-md"
+            >
               <img
                 src="images/icons/phone-svgrepo-com.svg"
                 alt="schedule icon"
@@ -176,28 +197,31 @@
         </dialog>
 
         <!-- title and CTA buttons -->
-        <div class="w-full flex flex-col lg:pt-20 lg:pl-24 ">
+        <div class="w-full flex flex-col lg:pt-20 lg:pl-24">
           <div class="text-background mx-auto lg:m-0">
             <h1 class="text-[0px]">Ethan's Coffee Heaven</h1>
             <img
               src="images/featured/ech-title.webp"
               alt="logo image"
-              class="mb-4 shadow-md lg:rounded-xl"
+              style="max-width: 100%; height: auto"
+              class="mb-4 shadow-md md:rounded-xl"
             />
             <div class="px-4 text-center lg:text-left lg:px-0">
-              <p class="text-lg lg:text-2xl mb-8">
+              <p class="text-lg lg:text-2xl mb-6">
                 Serving the best coffee in Labasa and Savusavu!
               </p>
-              <div class="flex space-x-4 justify-center md:text-xl lg:justify-start">
-                <a
-                  href="#menus"
-                  class="bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title font-semibold px-8 py-2 rounded-xl"
-                  >View Menus</a
-                >
+              <div class="flex flex-wrap justify-center md:text-xl lg:hidden">
                 <a
                   href="#"
-                  class="bg-secondary hover:bg-text text-white font-semibold px-8 py-2 rounded-xl"
-                  >CALL</a
+                  onclick="openDialog()"
+                  class="bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title px-8 py-2 m-2 rounded-full shadow-md w-full max-w-[180px]"
+                >
+                  Contact us
+                </a>
+                <a
+                  href="#menus"
+                  class="bg-secondary hover:bg-secondaryHover text-white px-8 py-2 m-2 rounded-full shadow-md w-full max-w-[180px]"
+                  >See menus</a
                 >
               </div>
             </div>
@@ -205,7 +229,16 @@
         </div>
 
         <span class="text-[0px] absolute bottom-0 right-0">
-          Background photo by <a href="https://unsplash.com/@asthetik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mike Kenneally</a> on <a href="https://unsplash.com/photos/tNALoIZhqVM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          Background photo by
+          <a
+            href="https://unsplash.com/@asthetik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Mike Kenneally</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/tNALoIZhqVM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
         </span>
       </section>
 
@@ -214,48 +247,99 @@
         id="menus"
         class="mb-24 mx-auto min-h-screen max-w-screen-xl px-4"
       >
-        <h2 class="text-center mb-8">Menus</h2>
+        <h2
+          class="text-center text-3xl lg:text-5xl mb-12 tracking-wide font-light"
+        >
+          Menus
+        </h2>
 
-          <div class="pb-4 lg:pb-0 mb-8 mx-auto rounded-xl shadow-md w-full max-w-[480px] lg:flex lg:justify-around lg:max-w-screen-xl lg:shadow-none">
-            <img
+        <div
+          class="pb-4 lg:pb-0 mb-8 mx-auto rounded-xl shadow-md w-full max-w-[480px] lg:flex lg:justify-around lg:max-w-screen-xl lg:shadow-none"
+        >
+          <img
             src="images/menus/menu-drinks.webp"
             alt="a cup of well presented coffee"
             class="rounded-t-xl mx-auto mb-8 lg:m-0 lg:rounded-xl lg:mb-0"
-            />
+          />
 
-            <span class="text-[0px] absolute bottom-0 right-0">
-              Photo by <a href="https://unsplash.com/@fahmipaping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fahmi Fakhrudin</a> on <a href="https://unsplash.com/images/food/coffee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </span>
+          <span class="text-[0px] absolute bottom-0 right-0">
+            Photo by
+            <a
+              href="https://unsplash.com/@fahmipaping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Fahmi Fakhrudin</a
+            >
+            on
+            <a
+              href="https://unsplash.com/images/food/coffee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Unsplash</a
+            >
+          </span>
 
-            <div class="px-4 mx-auto text-center max-w-xs lg:min-w-[480px] lg:mx-0 lg:px-0 lg:flex flex-col justify-center">
-              <a href="menus/drinks.pdf">
-                <h3 class="py-2 rounded-full mb-4 shadow-md text-2xl text-title transition-colors bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient max-w-xs">Coffee & drinks</h3>
-              </a>
-              <p class="lg:text-lg lg:text-left">Freshly brewed coffees, refreshing smoothies and slushies</p>
-            </div>
+          <div
+            class="px-4 mx-auto text-center max-w-xs lg:min-w-[480px] lg:mx-0 lg:px-0 lg:flex flex-col justify-center"
+          >
+            <a href="menus/drinks.pdf">
+              <h3
+                class="py-2 rounded-full mb-4 shadow-md text-2xl text-title transition-colors bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient max-w-xs lg:max-w-[240px]"
+              >
+                Coffee & drinks
+              </h3>
+            </a>
+            <p class="lg:text-lg lg:text-left">
+              Freshly brewed coffees, refreshing smoothies and slushies
+            </p>
           </div>
+        </div>
 
-          <div class="pb-4 lg:pb-0 mb-8 mx-auto rounded-xl shadow-md w-full max-w-[480px] lg:flex lg:flex-row-reverse lg:justify-around lg:max-w-screen-xl lg:shadow-none">
-            <img src="images/menus/menu-breakfast.webp" alt="a delicious breakfast" class="rounded-t-xl mx-auto mb-8 lg:m-0 lg:rounded-xl lg:mb-0 lg:max-w-lg" />
+        <div
+          class="pb-4 lg:pb-0 mb-8 mx-auto rounded-xl shadow-md w-full max-w-[480px] lg:flex lg:flex-row-reverse lg:justify-around lg:max-w-screen-xl lg:shadow-none"
+        >
+          <img
+            src="images/menus/menu-breakfast.webp"
+            alt="a delicious breakfast"
+            class="rounded-t-xl mx-auto mb-8 lg:m-0 lg:rounded-xl lg:mb-0 lg:max-w-lg"
+          />
 
-            <div class="px-4 mx-auto text-center max-w-xs lg:min-w-[480px] lg:mx-0 lg:px-0 lg:flex flex-col justify-center">
-              <a href="menus/breakfast.pdf">
-                <h3 class="py-2 rounded-full mb-4 shadow-md text-2xl text-title transition-colors bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient max-w-xs lg:float-right lg:w-[320px]">Breakfast</h3>
-              </a>
-              <p class="lg:text-lg lg:text-right">Big breakfasts, light breakfast and Fijian breakfasts</p>
-            </div>
+          <div
+            class="px-4 mx-auto text-center max-w-xs lg:min-w-[480px] lg:mx-0 lg:px-0 lg:flex flex-col justify-center"
+          >
+            <a href="menus/breakfast.pdf">
+              <h3
+                class="py-2 rounded-full mb-4 shadow-md text-2xl text-title transition-colors bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient max-w-xs lg:float-right lg:w-[240px]"
+              >
+                Breakfast
+              </h3>
+            </a>
+            <p class="lg:text-lg lg:text-right">
+              Big breakfasts, light breakfast and Fijian breakfasts
+            </p>
           </div>
+        </div>
 
-          <div class="pb-4 lg:pb-0 mb-8 mx-auto rounded-xl shadow-md w-full max-w-[480px] lg:flex lg:justify-around lg:max-w-screen-xl lg:shadow-none">
-            <img src="images/menus/menu-lunch.webp" alt="a delicious lunch" class="rounded-t-xl mx-auto mb-8 lg:m-0 lg:rounded-xl lg:mb-0 lg:max-w-lg" />
+        <div
+          class="pb-4 lg:pb-0 mb-8 mx-auto rounded-xl shadow-md w-full max-w-[480px] lg:flex lg:justify-around lg:max-w-screen-xl lg:shadow-none"
+        >
+          <img
+            src="images/menus/menu-lunch.webp"
+            alt="a delicious lunch"
+            class="rounded-t-xl mx-auto mb-8 lg:m-0 lg:rounded-xl lg:mb-0 lg:max-w-lg"
+          />
 
-            <div class="px-4 mx-auto text-center max-w-xs lg:min-w-[480px] lg:mx-0 lg:px-0 lg:flex flex-col justify-center">
-              <a href="menus/main.pdf">
-                <h3 class="py-2 rounded-full mb-4 shadow-md text-2xl text-title transition-colors bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient max-w-xs">Lunch</h3>
-              </a>
-              <p class="lg:text-lg lg:text-left">Burgers, pizzas, wraps, curries and more</p>
-            </div>
+          <div
+            class="px-4 mx-auto text-center max-w-xs lg:min-w-[480px] lg:mx-0 lg:px-0 lg:flex flex-col justify-center"
+          >
+            <a href="menus/main.pdf">
+              <h3
+                class="py-2 rounded-full mb-4 shadow-md text-2xl text-title transition-colors bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient max-w-xs lg:max-w-[240px]"
+              >
+                Lunch
+              </h3>
+            </a>
+            <p class="lg:text-lg lg:text-left">
+              Burgers, pizzas, wraps, curries and more
+            </p>
           </div>
+        </div>
       </section>
 
       <!-- reviews -->
@@ -263,46 +347,61 @@
         id="testimonals"
         class="mb-24 mx-auto min-h-screen max-w-screen-xl px-4"
       >
-        <h2 class="text-center">What our customers say</h2>
+        <h2
+          class="text-center text-3xl lg:text-5xl my-12 tracking-wide font-light"
+        >
+          What our customers say
+        </h2>
 
         <!-- google reviews  -->
-        <!-- <div class="mb-8">
-          <div class="sk-ww-google-reviews" data-embed-id="114009"></div>
-        </div> -->
+        <div class="mb-8">
+          <h3 class="mb-2 text-[0px] tracking-wide">Google Reviews</h3>
+          <div class="sk-ww-google-reviews bg-black" data-embed-id="114009"></div>
+          <script
+            src="https://widgets.sociablekit.com/google-reviews/widget.js"
+            async
+            defer
+          ></script>
+        </div>
 
         <a
           href="https://g.page/r/CRSPZUyY67JkEB0/review"
-          class="flex items-center mx-auto max-w-lg p-4 transition-color text-xl text-title bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient cursor-pointer rounded-lg shadow-lg"
+          class="mb-12 flex items-center justify-center mx-auto max-w-lg p-4 text-lg bg-white text-[#3480dc] rounded-full shadow-md transition-colors hover:bg-primaryHover"
         >
           <img
             src="images/social/google-svgrepo-com.svg"
             alt="google logo"
             class="mr-4"
+            height="36px"
+            width="36px"
           />
           <span>Review Ethan's Coffee Heaven on Google!</span>
         </a>
 
-        <div class="hidden xl:my-8"></div>
-
         <!-- tripadvisor reviews, hidden on mobile and tablet -->
-        <!-- <div class="hidden xl:block">
+        <div class="hidden xl:block">
+          <h3 class="ml-2 mb-[-24px] text-2xl tracking-wide">Trip Advisor Reviews</h3>
           <div class="sk-ww-tripadvisor-reviews" data-embed-id="114321"></div>
           <script
             src="https://widgets.sociablekit.com/tripadvisor-reviews/widget.js"
             async
             defer
           ></script>
-        </div> -->
+        </div>
       </section>
 
       <!-- location -->
-      <section id="location" class="min-h-screen max-w-screen-xl mx-auto px-4">
-        <h2 class="text-center mb-8">Locations</h2>
-
-        <div
-          id="labasa"
-          class="flex flex-col lg:flex-row lg:justify-around mb-12"
+      <section
+        id="location"
+        class="min-h-screen max-w-screen-xl mx-auto px-4 mb-24"
+      >
+        <h2
+          class="text-center text-3xl lg:text-5xl my-12 tracking-wide font-light"
         >
+          Locations
+        </h2>
+
+        <div id="labasa" class="flex flex-col lg:flex-row lg:justify-around">
           <div
             class="mb-8 lg:mb-0 mx-auto lg:mx-2 max-w-[540px] rounded-lg shadow-md pb-4 bg-white"
           >
@@ -329,7 +428,8 @@
                 height="48px"
                 width="48px"
               />
-              <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6"
+              <a
+                href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6"
                 class="ml-4 py-2 px-4 rounded-full bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title"
                 >Get Directions</a
               >
@@ -350,9 +450,11 @@
                 height="48px"
                 width="48px"
               />
-              <a href="tel:+6798082204"
-              class="ml-4 py-2 px-4 rounded-full bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title">
-              808 2204
+              <a
+                href="tel:+6798082204"
+                class="ml-4 py-2 px-4 rounded-full bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title"
+              >
+                808 2204
               </a>
             </div>
             <div class="ml-4">
@@ -432,9 +534,11 @@
                 height="48px"
                 width="48px"
               />
-              <a href="tel:+6799078562"
-              class="ml-4 py-2 px-4 rounded-full bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title">
-              907 8562
+              <a
+                href="tel:+6799078562"
+                class="ml-4 py-2 px-4 rounded-full bg-gradient-to-tr from-primary to-primaryGradient hover:bg-gradient-to-tr hover:from-primaryHover hover:to-primaryGradient text-title"
+              >
+                907 8562
               </a>
             </div>
             <div class="ml-4">
@@ -467,7 +571,11 @@
         </div>
       </section>
     </main>
-    <script src="scripts/aos.js"></script>
+    <footer
+      class="bg-gradient-to-t from-secondary to-secondaryGradient text-background h-24 flex items-center justify-center"
+    >
+      <p>&#169; Ethan's Coffee Heaven 2023</p>
+    </footer>
     <script src="scripts/app.js"></script>
   </body>
 </html>
