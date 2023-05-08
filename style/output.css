@@ -1878,11 +1878,11 @@ video {
 }
 
 .bg-banner {
-  background-image: url('images/backgrounds/banner.webp');
+  background-image: url('../images/backgrounds/banner.webp');
 }
 
 .bg-beans-wall {
-  background-image: url('images/backgrounds/coffee-beans-wall.webp');
+  background-image: url('../images/backgrounds/coffee-beans-wall.webp');
 }
 
 .bg-gradient-to-t {
