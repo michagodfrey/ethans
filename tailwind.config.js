@@ -16,8 +16,6 @@ module.exports = {
       },
       backgroundImage: {
         banner: "url('../images/backgrounds/banner.webp')",
-        "beans-spill": "url('../images/backgrounds/coffee-beans-spill.webp')",
-        "beans-cover": "url('../images/backgrounds/coffee-beans-cover.webp')",
         "beans-wall": "url('../images/backgrounds/coffee-beans-wall.webp')",
       },
     },
