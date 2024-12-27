@@ -1,5 +1,7 @@
 # Ethan's Coffee Heaven
 
+Former design for the Ethan's Coffee Heaven website. Replaced by [this repository](https://github.com/michagodfrey/ethans2).
+
 ## Acknowledgements
 
 Mobile menu drawer JavaScript and CSS adapted from [this repository](https://github.com/tomaszbujnowicz/vanilla-js-drawer).
